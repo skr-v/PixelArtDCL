@@ -1,6 +1,6 @@
 import express = require('express');
 import cors = require('cors');
-//import { Schema, Document } from "mongoose";
+import mongoose, { Document, Schema, Model, model} from "mongoose";
 import * as bodyParser from "body-parser";
 //import { Interface } from "readline";
 const validColorPattern = /^#[0-9A-F]{3,6}$/i;
@@ -15,16 +15,45 @@ const host = "127.0.0.1";
 
 expressApp.use(cors());
 
+// mongoose-mongodb config
+const mongoserver = '127.0.0.1:27017'; // replace mongodb server address
+const database = 'pixelArtDCL';   // replace database name
+mongoose.connect(`mongodb://${mongoserver}/${database}`)
+    .then(() => {
+        console.log("Database connection successful");
+    })
+    .catch(err => {
+        console.error("Database connection error");
+    });
+
 //
 // Pixel schema and model
 //
-export interface IPixel {
+export interface IPixel{
+  setID?: string,
+  userID?: string,
   x: number,
   y: number,
-  color?: string
+  color?: string,
+  note?: string,
+  timestamp?: Date
 }
 
 let pixels: IPixel[] = []
+
+// PixelSchema
+const PixelSchema = new Schema({
+    setID: String,
+    userID: String,
+    x: Number,
+    y: Number,
+    colour: String,
+    note: String,
+    timestamp: {type: Date, default: Date.now}
+});
+
+// Pixel Model
+const Pixel = model('Pixel', PixelSchema);
 
 //
 // get all pixels
