@@ -45,3 +45,14 @@ td {
     transform: rotate(360deg);
   }
 }
+
+@media (max-width:1024px) {
+  td, tr {
+    font-size: .5rem;
+  }
+  
+  td {
+    height: 1rem;
+    width: 1rem;
+  }
+}
