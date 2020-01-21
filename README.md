@@ -67,12 +67,17 @@ npm install
 dcl start
 ```
 
-#### Run the db view
+#### Run the db view page
 
+```sh
 cd client
+
 npm install
+
 npm run build
+
 npm start
+```
 
 Open multiple browser tabs by copying the preview URL. Interact with the pixels on one tab to see that it also changes on other tabs as well.
 
