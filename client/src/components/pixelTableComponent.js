@@ -26,7 +26,7 @@ class PixelTable extends Component {
             if (cell) {
                 console.log(i, rowIndex);
             }
-        cols.push(<td key={i} style={{backgroundColor: cell ? cell.color : 'black'}}>{rowIndex === 0 ? i : null}</td>);
+        cols.push(<td key={i} style={{backgroundColor: cell ? cell.color : 'black'}}></td>);
         }
         return cols;
     }
@@ -34,7 +34,7 @@ class PixelTable extends Component {
     createRows() {
         let rows = [];
         for (let i = this.props.rows-1; i >= 0; i--) {
-        rows.push(<tr key={i}>{i}{this.createColumns(i)}</tr>);
+        rows.push(<tr key={i}>{this.createColumns(i)}</tr>);
         }
         return rows;
     }
