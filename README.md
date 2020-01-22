@@ -3,8 +3,9 @@ Advanced Pixel Art Colab Project for Decentraland
 
 Based on Nico Earnshaw's Remote Mural for DCL
 https://github.com/decentraland-scenes/Remote-mural
+also based on Tony Crowe's https://github.com/tcrowe/sample-sync-rest
 
-This repo is for additions and advancements required for the Lemursiv scene around Madagascar.
+This repo is for additions and advancements required for the Lemursiv scene at Madagascar DCL.
 
 First README follows below
 
