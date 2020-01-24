@@ -77,6 +77,12 @@ for (let i = 0; i< swatchColors.length; i++){
   wallPixelColorMaterial[swatchColors[i]] = material  
 }
 
+  let paletteMaterial = new Material()
+  let color = Color3.FromHexString(paletteColor)
+  paletteMaterial.ambientColor = color
+  paletteMaterial.albedoColor = color
+  paletteMaterial.reflectivityColor = color
+  wallPixelColorMaterial[paletteColor] = paletteMaterial
 
 export let wallPixelTransparentMaterial = new Material()
 wallPixelTransparentMaterial.alpha = 0.1

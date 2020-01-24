@@ -115,4 +115,5 @@ export const swatchColors = [
   "#8B0000",
   "#470000",
   "#2C0000"
+  // paletteColor
 ]
