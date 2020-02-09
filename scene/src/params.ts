@@ -3,8 +3,8 @@ export const refreshInterval: number = 1
 
 
 
-export const wallBlocksX: number = 21;
-export const wallBlocksY: number = 6;
+export const wallBlocksX: number = 8;
+export const wallBlocksY: number = 8;
 export const wallWidth = 7;
 export const wallHeight = 2;
 export const wallOffsetX = 0.75;
@@ -17,7 +17,7 @@ export const wallPixelScale: Vector3 = new Vector3(wallWidth / wallBlocksX - 0.0
 
 ///// Connect to the REST API
 
-export const apiUrl = "http://127.0.0.1:7753"
+export const apiUrl = "http://ec2-34-216-54-88.us-west-2.compute.amazonaws.com:7753"
 
 export const headers = {
   Accept: "application/json",
